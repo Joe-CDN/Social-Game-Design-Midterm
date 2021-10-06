@@ -32,9 +32,9 @@ public class thirdpersonmovescript : MonoBehaviour
             transform.rotation = Quaternion.Euler(0f, angle, 0f);
 
             moveDir = Quaternion.Euler(0f, targetAngle, 0f) * Vector3.forward;
-            controller.Move(moveDir.normalized * speed * Time.deltaTime);
+            //controller.Move(moveDir.normalized * speed * Time.deltaTime);
         }
-        //moveDir.y -= gravity * Time.deltaTime;
-        //controller.Move(moveDir.normalized * speed * Time.deltaTime);
-    }    
+        moveDir.y -= gravity * Time.deltaTime;
+        controller.Move(moveDir.normalized * speed * Time.deltaTime);
+    }
 }

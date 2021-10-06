@@ -9,4 +9,11 @@ public class Coin : MonoBehaviour
     {
         transform.Rotate(0, 0, 50 * Time.deltaTime);
     }
+    //void OnCollisionEnter(Collision collision)
+    //{
+    //    if (collision.collider.tag.Equals("Player"))
+    //    {
+    //        Destroy(this.gameObject);
+    //    }
+    //}
 }
